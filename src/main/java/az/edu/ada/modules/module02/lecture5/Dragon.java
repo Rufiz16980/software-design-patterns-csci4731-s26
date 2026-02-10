@@ -1,6 +1,7 @@
 package az.edu.ada.modules.module02.lecture5;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Dragon implements Cloneable {
 
@@ -14,7 +15,7 @@ public class Dragon implements Cloneable {
     }
 
     public void loadTexture() throws InterruptedException {
-        System.out.println("Loading texture");
+        System.out.println("Loading texture 2 seconds");
         Thread.sleep(2000);
         texture = new byte[10]; 
     }
@@ -38,14 +39,21 @@ public class Dragon implements Cloneable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Dragon proto = new Dragon("BigBad", "red");
-        proto.loadTexture();
+        Dragon prototype = new Dragon("BigBad", "Red");
+        prototype.loadTexture();
 
-        Dragon clone = proto.clone();
+        List<Dragon> army = new ArrayList<>();
 
-        System.out.println("Original: " + proto);
-        System.out.println("Clone: " + clone);
-        System.out.println("Distinct Objects: " + (proto != clone));
-        System.out.println("Shared Data values: " + Arrays.equals(proto.texture, clone.texture));
+        long startTime = System.currentTimeMillis();
+
+        for (int i = 1; i <= 10; i++) {
+            Dragon clone = prototype.clone();
+            clone.name = "OtherOne" + i; 
+            army.add(clone);
+            System.out.println("Created: " + clone);
+        }
+
+        long endTime = System.currentTimeMillis();
+        System.out.println("10 dragons: " + (endTime - startTime) + "ms");
     }
 }
