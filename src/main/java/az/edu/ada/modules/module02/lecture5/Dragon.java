@@ -57,3 +57,4 @@ public class Dragon implements Cloneable {
         System.out.println("10 dragons: " + (endTime - startTime) + "ms");
     }
 }
+
