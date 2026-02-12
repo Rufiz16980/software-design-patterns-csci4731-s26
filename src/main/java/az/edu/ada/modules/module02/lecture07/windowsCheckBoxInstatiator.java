@@ -9,7 +9,7 @@ public class windowsCheckBoxInstatiator extends checkBoxInstatiator{
     static public class windowsCheckBox implements checkBox { 
         @Override 
         public void mark() { // because interface method was public
-            System.err.println("windowsButton is activate");
+            System.err.println("circular windowsCheckBox is activated");
         }
     }
 }

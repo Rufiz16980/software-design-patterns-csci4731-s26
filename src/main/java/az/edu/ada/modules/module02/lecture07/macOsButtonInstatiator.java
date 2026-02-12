@@ -9,7 +9,7 @@ public class macOsButtonInstatiator extends ButtonInstatiator{
     static public class macOsButton implements Button { 
         @Override 
         public void activate() { // because interface method was public
-            System.err.println("macOsButton is activate");
+            System.err.println("circular macOsButton is activated");
         }
     }
 }

@@ -9,7 +9,7 @@ public class windowsButtonInstatiator extends ButtonInstatiator{
     static public class windowsButton implements Button { 
         @Override 
         public void activate() { // because interface method was public
-            System.err.println("windowsButton is activate");
+            System.err.println("rectangular windowsButton is activated");
         }
     }
 }

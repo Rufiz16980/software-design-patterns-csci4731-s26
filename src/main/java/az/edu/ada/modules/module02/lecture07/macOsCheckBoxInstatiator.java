@@ -9,7 +9,7 @@ public class macOsCheckBoxInstatiator extends checkBoxInstatiator{
     static public class macOsCheckBox implements checkBox { 
         @Override 
         public void mark() { // because interface method was public
-            System.err.println("macOsButton is activate");
+            System.err.println("rectangular macOsCheckBox is activated");
         }
     }
 }
