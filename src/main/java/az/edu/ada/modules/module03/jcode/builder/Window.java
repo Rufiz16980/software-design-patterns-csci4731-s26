@@ -14,7 +14,7 @@ public class Window {
     }
 
     public void present() {
-        System.out.println("--- Window Presentation ---");
+        //System.out.println("--- Window Presentation ---");
         for (Object component : components) {
             if (component instanceof String) {
                 System.out.println("LABEL: " + component);
@@ -26,6 +26,6 @@ public class Window {
                 ((ProgressBar) component).render();
             }
         }
-        System.out.println("---------------------------");
+        //System.out.println("---------------------------");
     }
 }
