@@ -18,5 +18,6 @@ public class myApp {
 
         windowsCheckBox.createCheckBox();
         macOsCheckBox.createCheckBox();
+    }
     
 }
